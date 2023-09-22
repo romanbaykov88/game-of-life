@@ -5,6 +5,8 @@ use Illuminate\Support\ServiceProvider;
 
 return [
 
+    'boardSize' => 25,
+
     /*
     |--------------------------------------------------------------------------
     | Application Name

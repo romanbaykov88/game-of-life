@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',  [\App\Http\Controllers\Controller::class, 'index']);
+Route::get('/toggle',  [\App\Http\Controllers\Controller::class, 'toggle'])->name('toggle');
+Route::get('/next',  [\App\Http\Controllers\Controller::class, 'next'])->name('next');
+Route::get('/rand',  [\App\Http\Controllers\Controller::class, 'randomize'])->name('rand');
+Route::get('/reset',  [\App\Http\Controllers\Controller::class, 'reset'])->name('reset');
